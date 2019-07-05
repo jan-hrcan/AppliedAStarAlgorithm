@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ControllerSettings">
+   <center>
+      <AnchorPane fx:id="settingsRoot" prefHeight="202.0" prefWidth="672.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Grid size (x axis):" />
+            <TextField layoutX="14.0" layoutY="34.0" fx:id="xAxisTextField" />
+            <Label layoutX="14.0" layoutY="67.0" text="Grid size (y axis):" />
+            <TextField fx:id="yAxisTextField" layoutX="14.0" layoutY="88.0" />
+            <Label layoutX="184.0" layoutY="14.0" text="Cell color:" />
+            <Label layoutX="331.0" layoutY="14.0" text="Start cell color:" />
+            <Label layoutX="334.0" layoutY="67.0" text="End cell color:" />
+            <Label layoutX="479.0" layoutY="14.0" text="Blocked cell color:" />
+            <ColorPicker fx:id="cellColorPicker" layoutX="184.0" layoutY="34.0" />
+            <ColorPicker fx:id="startCellColorPicker" layoutX="331.0" layoutY="34.0" />
+            <ColorPicker fx:id="endCellColorPicker" layoutX="331.0" layoutY="88.0" />
+            <ColorPicker fx:id="blockedCellColorPicker" layoutX="479.0" layoutY="34.0" />
+            <Button fx:id="buttonApplyChanges" layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#buttonApplyChangesOnAction" prefHeight="50.0" prefWidth="100.0" text="Set chosen" />
+            <Button fx:id="buttonDoAlgorithm" disable="true" layoutX="134.0" layoutY="135.0" mnemonicParsing="false" onAction="#buttonDoAlgorithmOnAction" prefHeight="50.0" prefWidth="100.0" text="A* algorithm" />
+            <Button fx:id="buttonClearGrid" layoutX="259.0" layoutY="135.0" mnemonicParsing="false" onAction="#buttonClearGridOnAction" prefHeight="50.0" prefWidth="100.0" text="Clear the grid" />
+            <Label layoutX="184.0" layoutY="67.0" text="Path cell color:" />
+            <ColorPicker fx:id="pathCellColorPicker" layoutX="184.0" layoutY="88.0" />
+            <Separator layoutY="126.0" prefHeight="3.0" prefWidth="776.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="126.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
